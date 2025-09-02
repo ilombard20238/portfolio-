@@ -1,48 +1,187 @@
-/* Google Font */
+/* ===================
+   Global Styles
+=================== */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   color: #222;
-  background: linear-gradient(135deg, #f8f9ff, #fef6fb);
+  background: linear-gradient(135deg, #f9fbfd, #fefefe);
+  line-height: 1.6;
 }
 
-/* Navbar */
-<nav>
-  <div class="logo">Isabella</div>
-  <ul class="nav-links">
-    <li><a href="index.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+/* ===================
+   Navbar
+=================== */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-.bakery-card {
-  background: linear-gradient(135deg, #f5e1c1, #d8b381); /* warm bread-like gradient */
-  border: 2px solid #a67c52; /* warm brown border */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ===================
+   Hero
+=================== */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero span {
+  color: #6a11cb;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #6a11cb;
+  transform: translateY(-3px);
+}
+
+/* ===================
+   Sections
+=================== */
+section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: #6a11cb;
+  font-weight: 800;
+}
+
+/* ===================
+   About Section
+=================== */
+.about-section {
+  background: #f9fbfd;
+  padding: 3rem;
   border-radius: 15px;
-  padding: 25px 20px;
-  box-shadow: 0 6px 15px rgba(166, 124, 82, 0.4);
-  color: #5a3e1b; /* deep brown text */
-  font-family: 'Georgia', serif; /* cozy serif font */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* ===================
+   Projects Grid
+=================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bakery-card h3 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-.bakery-card p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
+/* ===================
+   Bakery Card (Special Styling)
+=================== */
+.bakery-card {
+  background: linear-gradient(135deg, #f5e1c1, #d8b381);
+  border: 2px solid #a67c52;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(166, 124, 82, 0.3);
+  color: #5a3e1b;
+  font-family: 'Georgia', serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bakery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(166, 124, 82, 0.45);
 }
 
 .bakery-card a {
   display: inline-block;
   margin-top: 12px;
-  padding: 8px 16px;
+  padding: 10px 18px;
   background-color: #a67c52;
   color: #fff;
   text-decoration: none;
@@ -55,148 +194,33 @@ body {
   background-color: #8c6434;
 }
 
-.bakery-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(166, 124, 82, 0.6);
-}
-
-
-
-.about-section {
-  background-color: #f5f8fa;   /* soft light background */
-  padding: 40px 30px;
-  margin: 50px auto;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Raleway', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-
-.about-section h2 {
-  font-weight: 800;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.about-section p {
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-}
-
-
-
-header {
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: white;
-  padding: 1rem 2rem;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav .logo {
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-}
-.hero h1 {
-  font-size: 2.5rem;
-}
-.hero span {
-  color: #6a11cb;
-}
-.hero p {
-  max-width: 600px;
-  margin: 1rem auto;
-  font-size: 1.1rem;
-}
-.btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background: #2575fc;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #6a11cb;
-}
-
-/* Section Layouts */
-section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #6a11cb;
-}
-
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.project-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Contact */
+/* ===================
+   Contact
+=================== */
 #contact p {
   text-align: center;
   font-size: 1.1rem;
 }
+
 #contact a {
   color: #2575fc;
   font-weight: 600;
   text-decoration: none;
 }
+
 #contact a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
+/* ===================
+   Footer
+=================== */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #f1f1f1;
   font-size: 0.9rem;
+  color: #555;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
 }
