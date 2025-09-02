@@ -16,6 +16,31 @@ body {
   </ul>
 </nav>
 
+.about-section {
+  background-color: #f5f8fa;   /* soft light background */
+  padding: 40px 30px;
+  margin: 50px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-section h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.about-section p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
 
 
 header {
