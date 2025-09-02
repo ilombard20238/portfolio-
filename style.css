@@ -16,6 +16,52 @@ body {
   </ul>
 </nav>
 
+.bakery-card {
+  background: linear-gradient(135deg, #f5e1c1, #d8b381); /* warm bread-like gradient */
+  border: 2px solid #a67c52; /* warm brown border */
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(166, 124, 82, 0.4);
+  color: #5a3e1b; /* deep brown text */
+  font-family: 'Georgia', serif; /* cozy serif font */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bakery-card h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.bakery-card p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bakery-card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #a67c52;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.bakery-card a:hover {
+  background-color: #8c6434;
+}
+
+.bakery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(166, 124, 82, 0.6);
+}
+
+
+
 .about-section {
   background-color: #f5f8fa;   /* soft light background */
   padding: 40px 30px;
